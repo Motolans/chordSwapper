@@ -1,0 +1,425 @@
+with(obj_string)
+{
+    instance_destroy();
+}
+
+if (!instance_exists(obj_instrument))
+{
+    instance_create(x, y, obj_instrument);
+}
+
+//assets
+
+
+noteE = obj_instrument.noteE;
+noteA = obj_instrument.noteA;
+noteD = obj_instrument.noteD;
+noteG = obj_instrument.noteG;
+noteB = obj_instrument.noteB;
+noteASharp = obj_instrument.noteASharp;
+noteCSharp = obj_instrument.noteCSharp;
+noteDSharp = obj_instrument.noteDSharp;
+noteC = obj_instrument.noteC;
+noteF = obj_instrument.noteF;
+noteFSharp = obj_instrument.noteFSharp;
+noteGSharp = obj_instrument.noteGSharp;
+
+    
+//two dimensional array: root, third, and fifth, respectively
+//C Major
+pairing[0,0] = noteC;
+pairing[0,1] = noteE;
+pairing[0,2] = noteG;
+
+
+//C Minor
+pairing[1,0] = noteC;
+pairing[1,1] = noteDSharp;
+pairing[1,2] = noteG;
+
+
+//C Sharp Major
+pairing[2,0] = noteCSharp;
+pairing[2,1] = noteF;
+pairing[2,2] = noteGSharp;
+
+
+//C Sharp Minor
+pairing[3,0] = noteCSharp;
+pairing[3,1] = noteE;
+pairing[3,2] = noteGSharp;
+
+
+
+//D Major
+pairing[4,0] = noteD;
+pairing[4,1] = noteFSharp;
+pairing[4,2] = noteA;
+
+
+//D Minor
+pairing[5,0] = noteD;
+pairing[5,1] = noteF;
+pairing[5,2] = noteA;
+
+
+//D Sharp Major
+pairing[6,0] = noteDSharp;
+pairing[6,1] = noteG;
+pairing[6,2] = noteASharp;
+
+
+//D Sharp Minor
+pairing[7,0] = noteDSharp;
+pairing[7,1] = noteFSharp;
+pairing[7,2] = noteASharp;
+
+
+//E Major
+pairing[8,0] = noteE;
+pairing[8,1] = noteGSharp;
+pairing[8,2] = noteB;
+
+
+//E Minor
+pairing[9,0] = noteE;
+pairing[9,1] = noteG;
+pairing[9,2] = noteB;
+
+
+//F Major
+pairing[10,0] = noteF;
+pairing[10,1] = noteA;
+pairing[10,2] = noteC;
+
+
+//F Minor
+pairing[11,0] = noteF;
+pairing[11,1] = noteGSharp
+pairing[11,2] = noteC;
+
+
+//F Sharp Major
+pairing[12,0] = noteFSharp;
+pairing[12,1] = noteASharp;
+pairing[12,2] = noteCSharp;
+
+
+//F Sharp Minor
+pairing[13,0] = noteFSharp;
+pairing[13,1] = noteA;
+pairing[13,2] = noteCSharp;
+
+
+//G Major
+pairing[14,0] = noteG;
+pairing[14,1] = noteB;
+pairing[14,2] = noteD;
+
+
+//G Minor
+pairing[15,0] = noteG;
+pairing[15,1] = noteASharp;
+pairing[15,2] = noteD;
+
+
+
+//G Sharp Major
+pairing[16,0] = noteG;
+pairing[16,1] = noteB;
+pairing[16,2] = noteD;
+
+
+//G Sharp Minor
+pairing[17,0] = noteGSharp;
+pairing[17,1] = noteB;
+pairing[17,2] = noteDSharp;
+
+
+
+//A Major
+pairing[18,0] = noteA;
+pairing[18,1] = noteCSharp;
+pairing[18,2] = noteE;
+
+
+//A Minor
+pairing[19,0] = noteA;
+pairing[19,1] = noteC;
+pairing[19,2] = noteE;
+
+
+//A Sharp Major
+pairing[20,0] = noteASharp;
+pairing[20,1] = noteD;
+pairing[20,2] = noteF;
+
+
+//A Sharp Minor
+pairing[21,0] = noteASharp;
+pairing[21,1] = noteCSharp;
+pairing[21,2] = noteF;
+
+
+//B Major
+pairing[22,0] = noteB;
+pairing[22,1] = noteDSharp;
+pairing[22,2] = noteFSharp;
+
+
+//B Minor
+pairing[23,0] = noteB;
+pairing[23,1] = noteD;
+pairing[23,2] = noteFSharp;
+
+
+//C Major
+pairing[24,0] = noteC;
+pairing[24,1] = noteE;
+pairing[24,2] = noteG;
+pairing[24,3] = noteB;
+
+//C Minor
+pairing[25,0] = noteC;
+pairing[25,1] = noteDSharp;
+pairing[25,2] = noteG;
+pairing[25,3] = noteASharp;
+
+//C Sharp Major
+pairing[26,0] = noteCSharp;
+pairing[26,1] = noteF;
+pairing[26,2] = noteGSharp;
+pairing[26,3] = noteC;
+
+//C Sharp Minor
+pairing[27,0] = noteCSharp;
+pairing[27,1] = noteE;
+pairing[27,2] = noteGSharp;
+pairing[27,3] = noteB;
+
+
+//D Major
+pairing[28,0] = noteD;
+pairing[28,1] = noteFSharp;
+pairing[28,2] = noteA;
+pairing[28,3] = noteCSharp;
+
+//D Minor
+pairing[29,0] = noteD;
+pairing[29,1] = noteF;
+pairing[29,2] = noteA;
+pairing[29,3] = noteC;
+
+//D Sharp Major
+pairing[30,0] = noteDSharp;
+pairing[30,1] = noteG;
+pairing[30,2] = noteASharp;
+pairing[30,3] = noteF;
+
+//D Sharp Minor
+pairing[31,0] = noteDSharp;
+pairing[31,1] = noteFSharp;
+pairing[31,2] = noteASharp;
+pairing[31,3] = noteCSharp;
+
+//E Major
+pairing[32,0] = noteE;
+pairing[32,1] = noteGSharp;
+pairing[32,2] = noteB;
+pairing[32,3] = noteCSharp;
+
+//E Minor
+pairing[33,0] = noteE;
+pairing[33,1] = noteG;
+pairing[33,2] = noteB;
+pairing[33,3] = noteD;
+
+//F Major
+pairing[34,0] = noteF;
+pairing[34,1] = noteA;
+pairing[34,2] = noteC;
+pairing[34,3] = noteE;
+
+//F Minor
+pairing[35,0] = noteF;
+pairing[35,1] = noteGSharp
+pairing[35,2] = noteC;
+pairing[35,3] = noteDSharp;
+
+//F Sharp Major
+pairing[36,0] = noteFSharp;
+pairing[36,1] = noteASharp;
+pairing[36,2] = noteCSharp;
+pairing[36,3] = noteF;
+
+//F Sharp Minor
+pairing[37,0] = noteFSharp;
+pairing[37,1] = noteA;
+pairing[37,2] = noteCSharp;
+pairing[37,3] = noteE;
+
+//G Major
+pairing[38,0] = noteG;
+pairing[38,1] = noteB;
+pairing[38,2] = noteD;
+pairing[38,3] = noteF;
+
+//G Minor
+pairing[39,0] = noteG;
+pairing[39,1] = noteASharp;
+pairing[39,2] = noteD;
+pairing[39,3] = noteFSharp;
+
+
+//G Sharp Major
+pairing[40,0] = noteG;
+pairing[40,1] = noteB;
+pairing[40,2] = noteD;
+pairing[40,3] = noteF;
+
+//G Sharp Minor
+pairing[41,0] = noteGSharp;
+pairing[41,1] = noteB;
+pairing[41,2] = noteDSharp;
+pairing[41,3] = noteG;
+
+
+//A Major
+pairing[42,0] = noteA;
+pairing[42,1] = noteCSharp;
+pairing[42,2] = noteE;
+pairing[42,3] = noteFSharp;
+
+//A Minor
+pairing[43,0] = noteA;
+pairing[43,1] = noteC;
+pairing[43,2] = noteE;
+pairing[43,3] = noteG;
+
+//A Sharp Major
+pairing[44,0] = noteASharp;
+pairing[44,1] = noteD;
+pairing[44,2] = noteF;
+pairing[44,3] = noteG;
+
+//A Sharp Minor
+pairing[45,0] = noteASharp;
+pairing[45,1] = noteCSharp;
+pairing[45,2] = noteF;
+pairing[45,3] = noteGSharp;
+
+//B Major
+pairing[46,0] = noteB;
+pairing[46,1] = noteD;
+pairing[46,2] = noteF;
+pairing[46,3] = noteA;
+
+//B Minor
+pairing[47,0] = noteB;
+pairing[47,1] = noteD;
+pairing[47,2] = noteFSharp;
+pairing[47,3] = noteA;
+
+
+
+
+
+
+
+
+//background loops, two-dimensional arrays to allow for each chord variation
+
+
+
+
+//randomizer array for incorrect strings
+
+
+
+
+
+
+
+    
+
+
+
+
+//randomizer = 6;
+selectedChord = obj_settings.selectedChord;
+chordIndex = -1;
+answerLength = array_length_1d(answer);
+for (i = 0; i < answerLength; i++)
+{
+    if selectedChord == answer[i]
+    {
+        chordIndex = i;
+    
+    }
+
+}
+
+numberOfStrings = array_length_2d(pairing, chordIndex);
+
+//variables for string placement. 
+spacing = 120
+widthOffset = 16;
+
+
+xpos[0] = room_width/numberOfStrings - widthOffset;
+
+
+
+
+//leave this alone
+xpos[1] = xpos[0] + spacing;
+xpos[2] = xpos[0] + (spacing * 2);
+xpos[3] = xpos[0] + (spacing * 3);
+xpos[4] = xpos[0] + (spacing * 4);
+xpos[5] = xpos[0] + (spacing * 3);
+xpos[6] = xpos[0] - (spacing * 3);
+xpos[7] = xpos[0] + (spacing * 4);
+
+
+goOn = false;
+
+//generate correct strings
+for (i = 0; i < numberOfStrings; i++)
+{   
+
+    thisString = instance_create (xpos[i], ypos, obj_string);
+
+
+  //  myPeg = instance_create(thisString.x-pegOffsetX, thisString.y - pegOffsetY, obj_peg);
+
+    //thisString.text = soundID[chordIndex, i];
+
+    thisString.myNote = pairing[chordIndex, i];
+    audio_sound_gain (thisString.myNote, obj_settings.stringGain, 0) 
+    thisString.corX = chordIndex;
+    thisString.corY = i
+    switch(i)
+    {
+        case 0:
+        thisString.part = "root";
+        break;
+        
+        case 1:
+        thisString.part = "third";
+        break;
+        
+        case 2:
+        thisString.part = "fifth";
+        break;
+        
+        case 3:
+        thisString.part = "seventh";
+        break;
+        
+    
+    }
+    
+}
+
+
+//instance_create(x, y, obj_stringShadows);
